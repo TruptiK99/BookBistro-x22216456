@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block body %}
+<!DOCTYPE html>
+<html>
+<head>
+   <h1>About Us</h1>
+
+   <div class='container'>
+      <a href="{% url 'send_updates' %}"><button class='btn btn-primary'>Send Updates</button></a>
+   </div>
+   
+   <img class="u-expanded-width u-image u-image-round u-radius u-image-1" src="static/images/image1.jpg" alt="" width="1500px" height="500px">
+   
+      <h5 class="u-align-left u-text u-text-1">Our Mission</h5>
+      <h3 class="u-align-left u-text u-text-2"> Founded in 2010, Haus group, an innovative real estate firm, operating under the permission of the Ministry of Economy, specializes in pairing dedicated agents with real estate clients to offer a unique real estate experience.</h3>
+      <p class="u-align-left u-text u-text-3">Sample text. Click to ​We believe that every home needs that special care that will help it find its owners. We want to be the property caregivers that provide the property and its owner with everything needed in their journey.  We're right there with you every step of the way. the Text Element.</p>
+    
+</head>
+
+</html>
+
+{% endblock %}

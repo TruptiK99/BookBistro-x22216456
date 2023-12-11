@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block body %}
+{% load static %}
+
+{%for i in booktable %}
+<!-- Products Section -->
+<div class="card">
+        <!-- Card -->
+        <div class="card d-block">
+          <div class="card-footer text-center py-4">
+            <h3 class="h5 mb-1">{{ i.table }}</h3>
+            <p>{{ i.description }}</p>
+            <span class="d-block text-muted font-size-1 mb-3">£50</span>
+            <h3>{{ i.no_of_people }}</h3>
+            <a class="btn btn-sm btn-outline-primary btn-pill transition-3d-hover px-5" href="{% url 'create_booktable' i.id %}">Book</a>
+
+          </div>
+        </div>
+        <!-- End Card -->
+      </div>
+      {%endfor%}
+      
+ 
+  {% endblock %}
+
+  

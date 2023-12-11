@@ -1,0 +1,6 @@
+
+    User: trupti
+    Table Id: 1
+    No of People: 2
+    Description: Table for 2 people
+    

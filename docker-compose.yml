@@ -1,0 +1,15 @@
+version: "3"
+services:
+  bookbistro:
+    build:
+      context: .
+    container_name: bookbistro
+    restart: always
+    volumes:
+      - ./:/bookbistro
+    ports:
+      - 8000:8000
+    networks:
+      - bookbistro
+networks:
+  bookbistro:

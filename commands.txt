@@ -1,0 +1,5 @@
+cd projects/
+docker-compose build bookbistro
+docker-compose up --no-start bookbistro
+docker-compose start bookbistro
+docker ps

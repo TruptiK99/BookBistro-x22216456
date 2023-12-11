@@ -1,0 +1,110 @@
+{% extends 'base.html' %}
+
+
+{% block body %}
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        /* ... Existing CSS ... */
+        h1 {
+            text-align: center; /* Center-align the text */
+        }
+
+        .blue-background {
+            background-color: rgb(5, 5, 83);
+            padding: auto;
+            margin-top: auto;
+            color: white;
+        }
+    .table-row {
+            display: table;
+            margin-bottom: 100px; 
+            margin: auto;
+            border-collapse: collapse;
+        }
+
+        .table-cell {
+            display: table-cell;
+            border: 1px solid white;
+            padding: 10px;
+            text-align: center;
+        }
+        .input-field {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.input-field label, .input-field input {
+    margin: 5px;
+}
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+}
+
+button {
+    background-color: rgb(255, 102, 0);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 1px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: rgb(23, 23, 158);
+}
+
+
+/* Existing CSS styles */
+
+
+    </style>
+</head>
+<body>
+    <div class="blue-background">
+    <h1>Book your table</h1>
+    <div class='container justify-content-between align-items-center'>
+    <div class="table-row">
+    <form action="/action_page.php">
+        <div class="table-cell"> <label for="reservationtime">Reservation (date and time):</label>
+        <input type="datetime-local" id="reservationtime" name="reservationtime"></div>
+        <div class="table-cell"><select name="Select_1" aria-label="Reservation party size">    <option value="1">1 person</option>    <option value="2" selected="selected">2 people</option>    <option value="3">3 people</option>    <option value="4">4 people</option>    <option value="5">5 people</option>    <option value="6">6 people</option>    <option value="7">7 people</option>    <option value="8">8 people</option> </select></div>
+    </form>
+    </div>
+</div>
+
+
+    
+    <div class="table-row">
+        <!-- Existing table cells -->
+    </div>
+
+    <div class="input-field">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name">
+    </div>
+
+    <div class="input-field">
+        <label for="contact">Contact:</label>
+        <input type="text" id="contact" name="contact">
+    </div>
+    <div class="button-container">
+        <button type="button" onclick="location.href='{% url 'booktable' %}'">BOOK TABLE</button>
+        
+    </div>
+    
+
+</div>
+</div>
+<img src="{% static 'images/image1.jpg'%}" alt="" width="100%" height="500px">
+</body>
+</html>
+
+{% endblock %}
